@@ -82,6 +82,32 @@ nav {
   width: 20rem;
 }
 
-.attendee {
+/* EVENT INFO SECTION ======================================================*/
+.section {
   background-color: #fff;
+}
+
+.event-paragraph {
+  text-align: justify;
+}
+
+.titles {
+  text-align: center;
+}
+
+.event-info-icons {
+  font-size: 5rem;
+}
+
+/* DIVIDER IMAGE ===========================================================*/
+.image-divider {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+
+  background-image: url(../img/background1.jpg);
+  background-size: cover;
+
+  z-index: -1;
 }

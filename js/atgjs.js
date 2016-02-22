@@ -1,4 +1,4 @@
-$(document).scroll(function(e) {
+$(document).on('scroll mousewheel',  function(e) {
   myParallax(document.body);
 });
 
@@ -8,6 +8,6 @@ function myParallax(element) {
   var slope = $('.my-parallax')[0].attributes['data-speed'].value
   var wTop = Math.floor(slope * element.scrollTop);
 
-  $('.my-parallax').animate({ 'top': wTop.toString()+'px' }, 0);
+  $('.my-parallax').animate({ 'top': wTop }, 0, 'linear');
 
 }
