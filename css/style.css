@@ -84,7 +84,12 @@ nav {
 
 /* EVENT INFO SECTION ======================================================*/
 .section {
+  position: relative;
+  left: 0;
+  width: 100%;
   background-color: #fff;
+
+  z-index: 10;
 }
 
 .event-paragraph {
@@ -100,13 +105,13 @@ nav {
 }
 
 /* DIVIDER IMAGE ===========================================================*/
-.image-divider {
+#image-divider {
   position: relative;
   left: 0;
   width: 100%;
   height: 30vh;
 
-  background-image: url(../img/background1.jpg);
+  background-image: url(../img/background2.jpg);
   background-size: cover;
 
   z-index: -1;

@@ -1,13 +1,17 @@
-$(document).on('scroll mousewheel',  function(e) {
-  myParallax(document.body);
+$(document).on('scroll mousewheel', function() {
+  bgParallax(document.body)
 });
 
-function myParallax(element) {
-  console.log(element.scrollTop);
+function bgParallax(myPage) {
 
-  var slope = $('.my-parallax')[0].attributes['data-speed'].value
-  var wTop = Math.floor(slope * element.scrollTop);
+  var pElements = document.getElementsByClassName('bg-parallax');
 
-  $('.my-parallax').animate({ 'top': wTop }, 0, 'linear');
+  for (var i=0; i<pElements.length; i++) {
 
+    var slope = pElements[i].attributes['data-speed'].value
+    var wTop = Math.floor(slope * myPage.scrollTop);
+
+    $('#'+pElements[i].id).animate({ 'background-position-y': wTop }, 0, 'linear');
+
+  }
 }
