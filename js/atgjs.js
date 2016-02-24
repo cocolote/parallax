@@ -6,17 +6,19 @@ $(window).load(function() {
   
 // BACKGROUND PARALLAX =======================================================
 $(document).on('scroll mousewheel', function() {
-  bgParallax(document.body)
+  bgParallax();
 });
 
-function bgParallax(myPage) {
+function bgParallax() {
 
   var pElements = document.getElementsByClassName('bg-parallax');
 
   for (var i=0; i<pElements.length; i++) {
 
-    var slope = pElements[i].attributes['data-speed'].value
-    var wTop = Math.floor(slope * myPage.scrollTop);
+    var slope = pElements[i].attributes['data-speed'].value;
+    // document.documentElement.scrollTop for IE
+    // document.body.scrollTop for the rest of the browsers
+    var wTop = Math.floor(slope * (document.body.scrollTop || document.documentElement.scrollTop));
 
     $('#'+pElements[i].id).animate({ 'background-position-y': wTop }, 0, 'linear');
 
