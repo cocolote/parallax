@@ -1,3 +1,10 @@
+// EVENT TITLE ANIMATION =====================================================
+$(window).load(function() {
+  $('#company-event').animate({ top: 23 + 'vh',
+                           opacity: 1.0 }, 1300);
+});
+  
+// BACKGROUND PARALLAX =======================================================
 $(document).on('scroll mousewheel', function() {
   bgParallax(document.body)
 });

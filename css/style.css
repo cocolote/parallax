@@ -62,9 +62,10 @@ nav {
 
 #company-event {
   position: absolute;
-  top: 23vh;
+  top: 10vh;
   left: 0;
   width: 100%;
+  opacity: 0.0;
 
   color: #fff;
   text-align: center;
@@ -78,7 +79,7 @@ nav {
   letter-spacing: 1rem;
 }
 
-#baner-line {
+#banner-line {
   border-color: #fff;
   width: 20rem;
 }
@@ -130,6 +131,7 @@ nav {
   font-size: 2rem;
 }
 
+/* MOBILE STYLE ============================================================*/
 @media screen and (max-width: 768px) {
   .section-title {
     top: 0;
