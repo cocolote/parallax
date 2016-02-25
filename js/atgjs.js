@@ -24,3 +24,17 @@ function bgParallax() {
 
   }
 }
+
+// HIGHLIGHT ERRORS =============================================
+function highLight(errors) {
+  for (var i=0; i < errors.length; i++) {
+    var fieldName = errors[i].property;
+    var message   = errors[i].message;
+    var wField = $('#'+fieldName).css('width');
+
+    $('#'+fieldName).addClass('invalid');
+    $('label[for="'+fieldName+'"]').addClass('active')
+                                   .css('width', wField)
+                                   .attr('data-error', message);
+  } 
+};
